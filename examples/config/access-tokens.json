@@ -1,0 +1,2 @@
+[{ "token" : "some-token", "scopes" : ["http://publicschema.org/scopes/admin"]  },
+  "another-token"]
