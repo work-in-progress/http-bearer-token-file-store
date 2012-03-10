@@ -30,6 +30,15 @@ methods. The first one checks if the token exists, but does not perform a scope
 check. The second one checks if the token is in the scope passed along. The scope
 can be null, an string, an array of one string, an array of many strings (all must be met).
 
+## Token File format
+
+	[{ "token" : "some-token", "scopes" : ["http://publicschema.org/scopes/admin"]  },
+	"another-token"]
+
+The token file must be a valid json file, with an array at the root, and can consist of two kind of entries, either a simple string ("another-token") or an object with a "token" and a "scopes" property, where "token" must be a string and "scopes" an array of zero or more scopes.
+
+When loading invalid content from a valid json file it will callback with an error.
+
 ## Check out
 
 * https://github.com/jaredhanson/passport
